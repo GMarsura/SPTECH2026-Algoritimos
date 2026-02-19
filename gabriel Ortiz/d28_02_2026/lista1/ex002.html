@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex002</title>
+</head>
+<script defer>
+    const calcularPeso = ()=>{
+        const altura = parseFloat(input_altura.value);
+        const peso = parseFloat(input_peso.value);
+
+        const imc = peso / (altura**3);
+        div_imcFinal.innerText = `Seu IMC é ${imc}`;
+
+    };
+</script>
+<body>
+    Peso:
+    <input type="number" id="input_peso">
+    Altura:
+    <input type="text" id="input_altura">
+
+    <button onclick="calcularPeso()">enviar</button>
+
+
+     
+    <div id="div_imcFinal"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex004</title>
+    <script defer>
+        const multiplicar = ()=>{
+            div_mensagem.innerText = `${parseFloat(primeiro_numero.value) * parseFloat(segundo_numero.value)}`
+        }
+
+        const dividir = ()=>{
+            div_mensagem.innerText = `${parseFloat(primeiro_numero.value) / parseFloat(segundo_numero.value)}`
+        }
+
+        const somar = ()=>{
+            div_mensagem.innerText = `${parseFloat(primeiro_numero.value) + parseFloat(segundo_numero.value)}`
+        }
+
+        const subtrair = ()=>{
+            div_mensagem.innerText = `${parseFloat(primeiro_numero.value) - parseFloat(segundo_numero.value)}`
+        }
+
+    </script>
+</head>
+<body>
+    
+    primeiro numero
+    <input type="text" id="primeiro_numero">
+
+    segundo numero
+    <input type="text" id="segundo_numero">
+
+    <button onclick="multiplicar()">multiplicar</button>
+    <button onclick="dividir()">dividir</button>
+    <button onclick="somar()">somar</button>
+    <button onclick="subtrair()">subtrair</button>
+
+
+    <div id="div_mensagem"></div>
+
+</body>
+</html>

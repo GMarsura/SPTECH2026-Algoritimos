@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex001</title>
+    <script defer>
+        const aposentadoriaHomem = ()=>{
+            const resto = parseInt(70 - input_idade.value);
+            div_mensagem.innerText = resto;
+        };
+        const aposentadoriaMulher = ()=>{
+            const resto = parseInt(60 - input_idade.value);
+            div_mensagem.innerText = resto;
+        };
+    </script>
+</head>
+<body>
+    Idade:
+    <input type="number" id="input_idade">
+
+    <button onclick="aposentadoriaHomem()" >Para homem</button>
+    <button onclick="aposentadoriaMulher()">Para Mulher</button>
+    
+    <div id="div_mensagem"></div>
+
+</body>
+</html>
