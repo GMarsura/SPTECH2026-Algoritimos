@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo Media</title>
+
+    <script defer>
+        const calcularMedia = ()=>{
+            const continuada = Number(input_nota_continuada.value);
+            const semestral = Number(input_nota_semestral.value);
+
+            
+
+            const media = continuada*0.4 + semestral*0.6;
+
+            display.innerText = `A média de ${input_nome.value} será de ${media}`;
+        }
+
+
+
+    </script>
+
+</head>
+<body>
+    
+    nota continuada
+    <input type="number" id="input_nota_continuada">
+
+    nota semestral
+    <input type="number" id="input_nota_semestral">
+
+    nome do aluno
+    <input type="text" id="input_nome">
+
+
+    <button onclick="calcularMedia()">calcular</button>
+
+    <div id="display"></div>
+</body>
+</html>

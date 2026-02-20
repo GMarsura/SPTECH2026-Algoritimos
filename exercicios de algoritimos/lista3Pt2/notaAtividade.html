@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotaAtividade</title>
+    <script defer>
+
+        
+
+
+        const calcularMedia = ()=>{
+            const media = (Number(nota1.value) + Number(nota2.value) + Number(nota3.value))/3;
+            input_media.innerText = `A soma das suas três atividades é: ${media}`;
+            
+        }
+
+        const calcularSoma = ()=>{
+            const soma = (Number(nota1.value) + Number(nota2.value) + Number(nota3.value));
+            input_soma.innerText = `${input_nome.value}, a média das suas atividades é: ${soma}`;
+            
+        }
+
+        const calcular = ()=>{
+            
+
+            calcularMedia();
+            calcularSoma();
+        }
+    </script>
+</head>
+<body>
+    
+    nome do aluno
+    <br>
+    <input type="text" id="input_nome">
+    <br>
+
+
+    Nota da Atividade Avaliativa 1
+    <input type="number" id="nota1">
+
+    Nota da Atividade Avaliativa 2
+    <input type="number" id="nota2">
+
+    Nota da Atividade Avaliativa 3
+    <input type="number" id="nota3">
+
+    <button id="button" onclick="calcular()">Mostrar nota</button>
+
+    <div id="input_soma"></div>
+    <div id="input_media"></div>
+
+
+</body>
+</html>
