@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <script defer>
+        var i = 0;
+
+        function incrementar(){
+            i++;
+            contador.innerHTML =contador.innerHTML + `<br>${i}`;
+        }
+        function decrementar(){
+            i--;
+            contador.innerHTML =contador.innerHTML + `<br>${i}`;
+        }
+
+    </script>
+
+
+</head>
+<body>
+    
+    <button onclick="incrementar()">incrementar</button>
+    <button onclick="decrementar()">decrementar</button>
+    <div id="contador">0</div>
+
+</body>
+</html>

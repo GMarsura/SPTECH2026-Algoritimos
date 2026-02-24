@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar saldo bancário</title>
+
+
+    <script defer>
+        var saldo = 0;
+        var extrato = '';
+
+        {}
+
+        function add(){
+            saldo += 100;
+            extrato = `ransferência de R$100 recebida! Saldo atual: R$${saldo}<br>`
+            id_saldo.innerHTML = saldo;
+            id_extrato.innerHTML += extrato;
+        }
+
+        function subtract(){
+            saldo -= 100;
+            extrato = `Pagamento de R$50 efetuado! Saldo atual: R$${saldo}<br>`
+            id_saldo.innerHTML = saldo;
+            id_extrato.innerHTML += extrato;
+        }
+
+    </script>
+</head>
+<body>
+    
+
+    <button id="receber" onclick="add()">Receber 100</button>
+    <button id="pagar" onclick="subtract()">Pagar 100</button>
+    <div style="border: 2px solid #000; border-radius: 8px; padding: 10px;">
+        <div style="display: flex; flex-direction: row;">
+        <h1>Saldo Bancario: </h1><h1 id="id_saldo">0</h1>
+        </div>
+        <br>
+        <h1>Estrato</h1>
+        <div id="id_extrato"></div>
+    </div>
+
+
+
+
+
+</body>
+</html>

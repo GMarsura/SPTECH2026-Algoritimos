@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle financeiro</title>
+<script defer>
+
+    var total = 0;
+    var mes = 1;
+    
+
+    function acumular(){
+        var vP = Number(input_valor_pecas.value)
+        var vS = Number(input_valor_servicos.value)
+        var p = Number(input_percentual.value)
+        var g = Number(input_gastos.value)
+
+        mes ++;
+        total += vS + vP;
+        var acumulado = total * p/100;
+        acumulado += g;
+
+       input_display.innerText = `
+       <br>
+           ${display.innerHTML}<br>
+           Resumo do mês ${mes} <br>
+           Total recebido = R$ ${total} <br>
+           Valor do Imposto = R$ ${p} <br>
+           Saldo Final de R$ ${acumulado} <br>
+           Acumulado até o Momento = R$ ${acumulado} <br>
+       `;
+
+      
+    }
+</script>
+
+</head>
+<body>
+
+    
+
+    valor recebido com a venda de peças
+    <input type="number" id="input_valor_pecas"> <br>
+    valor recebido com a venda de serviços
+    <input type="number" id="input_valor_servicos"><br>
+    percentual de impostos sobre os input_valor_servicos
+    <input type="number" id="input_percentual"><br>
+    total de gastos
+    <input type="number" id="input_gastos"><br>
+    <button onclick="acumular()">Acumular</button>
+
+
+
+    <div id="input_display"></div>
+</body>
+</html>
