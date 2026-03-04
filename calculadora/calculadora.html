@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function calcularVolume(){
+            let piAproximado = 3.14;
+
+
+            let altura = Number(id_altura.value);
+            let raio = Number(id_raio.value);
+            let distancia = Number(id_distancia.value);
+
+            let volumeTotal = raio**2 * piAproximado * altura;
+
+            let volumeGrãos = raio**2 * piAproximado * (altura - distancia);
+
+            let percentagem = (volumeGrãos/volumeTotal*100);
+
+            id_mensagem.innerHTML = `
+            O volume total do silo é de ${volumeTotal} metros cúbicos. Equivalente a ${volumeTotal * 1000} litros.<br>
+            O volume dos grãos é de ${volumeGrãos} metros cúbicos. Equivalente a ${volumeGrãos * 1000} litros.<br>
+            A percentagem do volume ocupado pelos grãos é de ${percentagem}%.
+            `;        
+
+        }
+
+    </script>
+</head>
+<body>
+    
+    Digite a altura do silo em metros: <input type="number" id="id_altura"><br>
+    Digite o raio do silo em metros: <input type="number" id="id_raio"><br>
+    Digite a distancia da tampa do silo até o topo dos grãos em metros:<input type="number" id="id_distancia"><br>
+
+    <br>
+    <div id="id_mensagem"></div>
+    <br>
+    <button onclick="calcularVolume()">Calcular Volume</button>
+
+</body>
+</html>
