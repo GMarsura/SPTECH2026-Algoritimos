@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Questão 1</title>
+</head>
+<body>
+   <h2>Questão 1</h2>
+
+   <span>Quantidade de Energia Consumida (kWh): </span>
+   <input type="text" id="input_kwh"> <br>
+
+   <button onclick="calcular()">Calcular Despesa</button>
+
+   <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+
+   function calcular(){
+      let kwh = Number(input_kwh.value)
+      let valorPorKwh = 0;
+      if(kwh < 100){
+         valorPorKwh = 0.95;
+      }else{
+         valorPorKwh = 1.5;
+      }
+
+      let result = kwh*valorPorKwh;
+
+      div_mensagem.innerHTML = `Com o consumo de ${kwh} kWh, a conta de energia totaliza R$ ${result}`
+      
+   }
+
+</script>

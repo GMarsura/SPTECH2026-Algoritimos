@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Questão 4</title>
+</head>
+<body>
+   <h2>Questão 4</h2>
+   <span>Quantidade de m³ de gás consumidos:</span>
+   <input type="text" id="input_metros"> <br>
+
+   <span>Tipo de Sistema: "GN" (Gás Natural) ou "GLP" (Gás de Botijão)</span>
+   <input type="text" id="input_sistema"> <br>
+
+   <span>Valor da Taxa de Instalação Fixa em Reais: </span>
+   <input type="text" id="input_taxa"> <br>
+
+   <button onclick="calcular()">Calcular Despesa</button>
+
+   <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+   var simulacao = 0;
+ function calcular(){
+   simulacao++;
+   let metros3 = Number(input_metros.value);
+   let sistema = input_sistema.value;
+   let sistemaPorExtenso = "";
+   let taxa = Number(input_taxa.value);
+
+   let valorBase = metros3;
+
+   if(sistema == "GN"){
+      sistemaPorExtenso = "Gás Natural"
+      if(metros3 > 20){
+         valorBase *= 8;
+      }else{
+         valorBase *= 6;
+      }
+   }
+   if(sistema == "GLP"){
+      sistemaPorExtenso = "Gás de Botijão"
+      if(metros3 > 20){
+         valorBase *= 7.5;
+      }else{
+         valorBase *= 5;
+      }
+   }
+   let custoTotal = valorBase + taxa;
+   let percentual = taxa / custoTotal * 100;
+
+
+   div_mensagem.innerHTML = `
+   Simulação ${simulacao}:<br> 
+   Sistema de ${sistemaPorExtenso} - O valor final é R$ ${custoTotal}. A taxa fixa de R$ ${taxa} representou ${percentual}% do total bruto.
+   `;
+
+ }
+
+</script>

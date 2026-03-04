@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Questão 2</title>
+</head>
+<body>
+   <h2>Questão 2</h2>
+   
+   <span>Quantidade de Energia Consumida (kWh): </span>
+   <input type="text" id="input_kwh"> <br>
+
+   <span>Bandeira Tarifária de Energia: </span>
+   <input type="text" id="input_bandeira"> <br>
+
+   <button onclick="calcular()">Calcular Despesa</button>
+
+   <div id="div_mensagem"></div>
+</body>
+</html>
+
+<script>
+
+   function calcular(){
+      let kwh = Number(input_kwh.value);
+      let bandeira = input_bandeira.value;
+      let valorPorKwh = 0;
+
+      if(bandeira == "verde"){
+         valorPorKwh = 0.75;
+      }
+
+      if(bandeira == "amarela"){
+         valorPorKwh = 0.9;
+      }
+      
+      if(bandeira == "vermelha"){
+         valorPorKwh = 1.15;
+      }
+
+      let result = kwh*valorPorKwh;
+
+      div_mensagem.innerHTML = `Com o consumo de ${kwh} kWh na bandeira ${bandeira}, a conta de energia totaliza R$ ${result}`
+
+   }
+
+</script>
