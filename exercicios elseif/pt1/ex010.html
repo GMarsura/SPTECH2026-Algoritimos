@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        function calcular(){
+            let tempoEps = 22;
+            let serie = ipt_serie.value;
+            let qtdEpisodios = Number(ipt_qtd_episodios.value);
+
+            div_mensagem.innerHTML = `Vejo que você gosta da série ${serie}`
+
+            if(qtdEpisodios*tempoEps > 60*30){
+            div_mensagem2.innerHTML = 'Uau, você realmente gosta dessa série!"'
+            }
+}
+    </script>
+</head>
+<body>
+    informe a ultima serie(sitcom) que você assistiu:
+    <input type="text" id="ipt_serie">
+    <br>
+    informe o total de episodios que você assistiu:
+    <input type="text" id="ipt_qtd_episodios">
+    <br>
+    <button onclick="calcular()">verificar nivel</button>
+
+
+    <div id="div_mensagem"></div>
+    <div id="div_mensagem2"></div>
+</body>
+</html>

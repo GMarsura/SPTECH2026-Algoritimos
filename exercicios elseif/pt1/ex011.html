@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function avaliar(){
+            let nome = ipt_nome.value;
+            let idade = Number(ipt_idade.value);
+
+            if(idade >= 18){
+                div_mensagem.innerHTML = `${nome}, vamos tirar a CNH?`
+            }else{
+                div_mensagem.innerHTML = `${nome}, vai jogar PlayStation!`
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    informe seu noeme:
+    <input type="text" id="ipt_nome">
+    <br>
+    informe sua idade:
+    <input type="text" id="ipt_idade">
+    <br>
+    <button onclick="avaliar()">avalizar aluno</button>
+    <br>
+    <div id="div_mensagem"></div>
+
+</body>
+</html>

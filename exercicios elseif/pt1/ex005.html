@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function rolaPizza(){
+            let valorPizza = Number(ipt_valor_pizza.value);
+            let qtdAmigos = Number(ipt_qtd_amigos.value);
+            let vpamigo = valorPizza/qtdAmigos;
+            div_mensagem.innerHTML = `Cada amigo vai pagar R$${vpamigo} pela pizza`;
+
+            if(vpamigo > 20){
+                div_mensagem2.innerHTML = 'Deu ruim! Pizza muito cara!';
+            }
+        }
+    </script>
+</head>
+<body>
+    Informe o valor da pizza:
+    <input type="text" id="ipt_valor_pizza">
+
+    Informe a quantidade de amigos reunidos:
+    <input type="text" id="ipt_qtd_amigos">
+
+    <button onclick="rolaPizza()">Rola a pizza</button>
+    <br>
+    <div id="div_mensagem"></div>
+
+    <br>
+
+    <b>
+        <i>
+            <div id="div_mensagem2" style="color: red;"></div>
+        </i>
+    </b>
+</body>
+</html>

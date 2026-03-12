@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+
+        function calcular(){
+            let rendaFamiliar = Number(ipt_renda_familiar.value);
+            let prestacao = Number(ipt_prestacao.value);
+            let percentual = prestacao / rendaFamiliar * 100;
+            div_mensagem2.innerHTML = `A prestação corresponde a ${percentual}% da renda familiar`;
+
+            if(percentual > 30){
+                div_mensagem2.innerHTML = 'Será necessário complementar a renda familiar';
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    Valor da renda familiar:
+    <input type="text" id="ipt_renda_familiar">
+
+    <br>
+
+    valor da prestação:
+    <input type="text" id="ipt_prestacao">
+
+    <button onclick="calcular()">Verificar financeamento</button>
+
+
+    <div id="div_mensagem"></div>
+    <b><i><div id="div_mensagem2" style="color: red;"></div></i></b>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function analizar(){
+            let n1 = Number(num1.value);
+            let n2 = Number(num2.value);
+
+            if(n1 % n2 == 0){
+                div_mensagem.innerHTML = `<img src="https://t.ctcdn.com.br/rXFo7gOfOO77AwAMDY9NhtIJjr4=/i490090.jpeg" width="50px">`;
+            }else{
+                div_mensagem.innerHTML = `<img src="https://img.cdndsgni.com/preview/10855893.jpg" width="50px" height="50px">`;
+            }
+        }
+    </script>
+</head>
+<body>
+    numero 1:
+    <input type="text" id="num1">
+    <br>
+    numero 2:
+    <input type="text" id="num2">
+    <br>
+    <button onclick="analizar()">testar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>

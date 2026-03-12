@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function calcular(){
+            let qtdLatas = Number(ipt_qtd_latas.value);
+            qtdLatas *= 365;
+
+            if(qtdLatas >= 500){
+                div_mensagem.InnerHTML = 'Cuidado com diabetes'
+            }
+        }
+    </script>
+</head>
+<body>
+    Quantidade de latas você toma por dia:
+    <input type="text" id="ipt_qtd_latas">
+
+    <button onclick="calcular()">quntos refris</button>
+    <br>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>

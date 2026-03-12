@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function analizar(){
+            let numero = Number(ipt_numero.value);
+            if(numero%2 == 0){
+                div_mensagem.innerHTML = `<spam style="color: red; background-color: yellow;">Esse número é par</spam>`;
+            }else{
+                div_mensagem.innerHTML = `<b><spam style="color: red;">Esse número é impar</spam></b>`;  
+            }
+        }
+    </script>
+</head>
+<body>
+    informe um numero
+    <input type="text" id="ipt_numero">
+    <button onclick="calcular()">analizar</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>

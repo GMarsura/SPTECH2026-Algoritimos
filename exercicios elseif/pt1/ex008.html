@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function calcular(){
+            let saldoConta = Number(ipt_saldo_conta.value);
+            let valorDebito = Number(ipt_valor_debito.value);
+
+            saldoConta -= valorDebito;
+
+            div_mensagem.innerHTML = `O saldo atual da conta corrente é R$${saldoConta}`;
+        }
+    </script>
+</head>
+<body>
+    informe o saldo da conta:
+    <input type="text" id="ipt_saldo_conta">
+
+    informe o valor do debito:
+    <input type="text" id="ipt_valor_debito">
+
+    <button onclick="calcular()">analizar conta</button>
+
+    <i><b><div id="div_mensagem" style="color: red;"></div></b></i>
+</body>
+</html>

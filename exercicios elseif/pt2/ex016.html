@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+
+        function ligar(){
+            let qtdH = Number(qtd_H.value);
+            let qtdM = Number(qtd_M.value);
+            let pesoPessoas = (qtdH*90) + (qtdM*70);
+
+            if(pesoPessoas <= 500){
+                div_mensagem.innerHTML = `<spam style="color: green;">Elevador vai se mover, pois está com ${pesoPessoas}kg</spam>`;
+            }else{
+                div_mensagem.innerHTML = `<spam style="color: red;">Elevador não pode ser ligado, excedeu a capacidade máxima de 500kg</spam>`;
+            }
+        }
+    </script>
+</head>
+<body>
+    informe a quantidade de homens no elevador:
+    <input type="text" id="qtd_H">
+    <br>
+    informe a quantidade de mulheres no elevador:
+    <input type="text" id="qtd_M">
+    <br>
+    <button onclick="ligar()">ligar elevador</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>

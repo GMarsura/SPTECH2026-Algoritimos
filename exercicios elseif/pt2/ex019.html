@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function calcular(){
+            let qtdChocolates = Number(ipt_qtd_chocolates.value);
+            let valorTotal = qtdChocolates * 3;
+            if(qtdChocolates >= 12){
+                valorTotal *= 2.5;
+            }
+            div_mensagem.innerHTML = `o valor da sua compra foi de R$${valorTotal}`;
+            
+        }
+    </script>
+</head>
+<body>
+    informe a quantidade de chocolates comprados:
+    <input type="text" id="ipt_qtd_chocolates">
+    <button onclick="calcular()">camprar</button>
+    <div id="div_mensagem"></div>
+</body>
+</html>
