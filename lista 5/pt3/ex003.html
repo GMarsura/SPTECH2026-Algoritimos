@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+
+        function simular(){
+            let precoPassagem = 4.40;
+            let tipoBilhete = id_tipoBilhete.value;
+            let tipoPassagem = id_tipoPassagem.value;
+
+            if(tipoPassagem === '2'){
+                precoPassagem = 5.9;
+            }
+
+            if(tipoBilhete === 'b'){
+                precoPassagem = precoPassagem / 2;
+            } else if(tipoBilhete === 'c'){
+                precoPassagem = 0;
+            }
+            div_mensagem.innerHTML = `O valor da passagem é R$ ${precoPassagem.toFixed(2)}`;
+        }
+    </script>
+</head>
+<body>
+    insira o tipo de bilhete que voce possui:
+    <select id="id_tipoBilhete">
+        <option value="a">comum</option>
+        <option value="b">estudante</option>
+        <option value="c">idoso/PNE</option>
+    </select>
+    <br>
+    insira o tipo de passagem:
+    <select name="id_tipoPassagem" id="id_tipoPassagem">
+        <option value="1">passagem unica</option>
+        <option value="2">passagem integrada</option>
+    </select>
+
+    <br>
+
+    <button onclick="simular()">simular preco</button>
+
+    <br>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>

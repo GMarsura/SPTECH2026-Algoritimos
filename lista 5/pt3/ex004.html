@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        function verificar(){
+            let login = id_login.value;
+            let senha = id_senha.value;
+            let informacaoPessoal = id_informacaoPessoal.value;
+
+            if(login === 'ana' && senha === 'braga' && (informacaoPessoal === '1949' ||informacaoPessoal === 'louro josé')){
+                alert('acesso permitido');
+            } else{
+                alert('acesso negado');
+            }
+        }
+    </script>
+</head>
+<body>
+    login
+    <input type="text" id="id_login">
+    <br>
+    senha
+    <input type="text" id="id_senha">
+    <br>
+    informacao pessoal
+    <input type="text" id="id_informacaoPessoal">
+    <br>
+    <button onclick="verificar()">entrar</button>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        let tentativas = 3;
+        
+        function verificar(){
+            let login = id_login.value;
+            let senha = id_senha.value;
+            let informacaoPessoal = id_informacaoPessoal.value;
+
+            if(tentativas <= 0){
+                div_alert.innerHTML = `<span>Usuário BLOQUEADO! Procure seu gerente!</span>`
+            }else if(login === 'ana' && senha === 'braga' && (informacaoPessoal === '1949' ||informacaoPessoal === 'louro josé')){
+                alert('acesso permitido');
+                tentativas = 3;
+                div_ten.innerHTML = `voce tem um total de ${tentativas} Tentativas restantes`;
+            } else{
+                alert('acesso negado');
+                tentativas --;
+                div_ten.innerHTML = `voce tem um total de ${tentativas} Tentativas restantes`;
+            }
+        }
+    </script>
+</head>
+<body>
+    login
+    <input type="text" id="id_login">
+    <br>
+    senha
+    <input type="text" id="id_senha">
+    <br>
+    informacao pessoal
+    <input type="text" id="id_informacaoPessoal">
+    <br>
+    <button onclick="verificar()">entrar</button>
+    <br>
+    <div id="div_ten">voce tem um total de 3 Tentativas restantes</div>
+    <br>
+    <div id="div_alert"></div>
+</body>
+</html>

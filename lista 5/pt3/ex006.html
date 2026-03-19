@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+
+        function verificar(){
+            let nota = Number(id_nota.value);
+            let frequencia = Number(id_frequencia.value);
+            let mensagem = '';
+            
+
+
+
+            if(frequencia < 0 || frequencia > 100){
+                alert('Onde já se viu frequência <0 ou >100?!');
+                mensagem = '';
+                velFr = false;
+            }else if(frequencia >= 75){
+                mensagem = `Aluno aprovado por frequência`;
+            }else if(frequencia < 75){
+                mensagem = `Aluno reprovado por frequência`;
+            }else if(nota < 0 || nota > 10){
+                alert('Onde já se viu nota <0 ou >10?!');
+                mensagem = '';
+                velNota = false;
+            }else if(nota >= 0 && nota < 6){
+                mensagem = `Aluno ficou abaixo da média`;
+            }else if(nota <= 8){
+                mensagem = `Aluno ficou na média`;
+            }else if(nota <= 10){
+                mensagem = `Aluno acima da média`;
+            }
+
+            div_mensagem.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    insira nota do aluno;
+    <input type="text" id="id_nota">
+
+    <br>
+
+    insira a frequencia do aluno;
+    <input type="text" id="id_frequencia">
+    <br>
+    <button onclick="verificar()">analizar aluno</button>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function avaliar(){
+            let tamanhoTela = Number(id_tamanhoTela.value);
+            let cor = id_cor.value;
+            let mensagem = 'ele nao gosta';
+            let src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGDog1Z8epa0yKYwuRejQLSwbgZhyKojghSQ&s";
+
+            if(!(tamanhoTela > 6.5 && (cor === 'prata' || cor === 'azul'))){
+                src = "https://www.luciobissiro.com.br/habito-do-despertar-decepcao/";
+            }
+            div_image.innerHTML = `<img src="${src}" alt="Imagem">`;
+        }
+    </script>
+</head>
+<body>
+    insira o tamanho da tela do celular encontrado;
+    <input type="text" id="id_tamanhoTela">
+
+    selecione a cor do celular encontrado;
+    <select id="id_cor">
+        <option value="preto">preto</option>
+        <option value="azul">azul</option>
+        <option value="prata">prata</option>
+        <option value="vermelho">vermelho</option>
+    </select>
+
+    <button onclick="avaliar()">Sera que ele gosta</button>
+    <br>
+    <div id="div_image"></div>
+</body>
+</html>

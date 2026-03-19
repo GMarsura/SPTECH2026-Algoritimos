@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+
+        function verificar(){
+            let temperatura = Number(id_temperatura.value);
+            let umidade = Number(id_umidade.value);
+            let mensagem = '';
+            if(umidade < 0 || umidade > 100){
+                alert( "Valor de umidade inválido");
+                mensagem = ``;
+            }else if((temperatura == 22 || temperatura == 23) && umidade < 60){
+                mensagem = `Clima agradável`;
+            }else{
+                mensagem = `Clima desconfortáve`;
+            }
+            div_m.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    insira a temperatura
+    <input type="text" id="id_temperatura">
+    <br>
+    insira a umidade do ar
+    <input type="text" id="id_umidade">
+    <br>
+    <button onclick="verificar()">avaliar clima</button>
+
+    <br>
+    <div id="div_m"></div>
+</body>
+</html>
