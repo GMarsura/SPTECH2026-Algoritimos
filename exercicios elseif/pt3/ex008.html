@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function verificar(){
+            let meta = Number(id_meta.value);
+            let economia = Number(id_economia.value);
+            let mensagem = 'Força! Ainda em busca da meta! Falta ' + (meta - economia);
+
+            if(economia >= meta){
+                mensagem = 'Parabéns, meta alcançada!';
+                if(economia > meta){
+                    mensagem += ' Meta ultrapassada em ' + (economia - meta);
+                }
+            }
+
+            div_mensagem.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    qual sua meta de economia?
+    <input type="text" id="id_meta">
+    <br>
+    quanto tem guardado?
+    <input type="text" id="id_economia">
+    <br>
+    <button onclick="verificar()">Analisar economia</button>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>

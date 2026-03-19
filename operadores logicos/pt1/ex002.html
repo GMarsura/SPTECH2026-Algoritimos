@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        function verificar(){
+            let rendaU = Number(id_renda.value)
+            let rendaT = Number(id_rendaT.value)
+
+            if(rendaU <= 1050 && rendaT <=2100){
+                alert('voce tera direito')
+            }else{
+                alert('você não terá direito')
+            }
+        }
+    </script>
+</head>
+<body>
+    informe a sua renda
+    <input type="text" id="id_renda">
+
+    informe a sua renda familiar total
+    <input type="text" id="id_rendaT">
+
+    <button onclick="verificar()">verificar ajuda</button>
+</body>
+</html>

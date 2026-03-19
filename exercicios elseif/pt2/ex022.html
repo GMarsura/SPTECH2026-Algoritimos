@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function verificar(){
+            let temperatura = Number(id_temperatura.value);
+            let src = 'https://nutritotal.com.br/publico-geral/material/sera-que-existe-alimento-bom-ou-ruim/';
+
+            if(temperatura >=  10){
+                src = 'https://www.cpt.com.br/cursos-agroindustria/artigos/por-que-os-alimentos-se-estragam';
+            }
+
+            div_image.innerHTML = `<img src="${src}" alt="" width="100px" height="100px" style="object-fit: cover;">`
+
+            
+        }
+
+    </script>
+</head>
+<body>
+    insira a temperatura do ambiente?
+    <input type="text" id="id_temperatura">
+
+    <button onclick="verificar()">verificar clima</button>
+    <br>
+
+    <div id="div_image"></div>
+</body>
+</html>

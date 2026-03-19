@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script defer>
+        function analizar(){
+            let meta = Number(id_meta.value);
+            let guardado = Number(id_guardado.value);
+            let frase = '';
+            if(guardado = meta){
+                frase = "Parabéns, meta alcançada!"
+            }else if(guardado > meta){
+                frase = `Meta ultrapassada em ${guardado - meta}`;
+            }else{
+                frase = "Força! Ainda em busca da meta!"
+            }
+
+            div_mensagem.innerHTML = frase;
+        }
+    </script>
 </head>
 <body>
-    
+    Qual é sua meta de economia
+    <input type="text" id="id_meta">
+    <br>
+    quanto tem guardado?
+    <input type="text" id="id_guardado">
+    <br>
+    <button onclick="analizar()">analizar</button>
+    <br>
+    <div id="div_mensagem"></div>
 </body>
 </html>

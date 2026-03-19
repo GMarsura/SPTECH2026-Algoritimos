@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+
+        function verificar(){
+            let nota = Number(id_nota.value);
+            let mensagem = 'Nota inválida';
+
+
+           
+
+            if(nota < 5){
+                mensagem = 'Aluno precisa de muita ajuda';
+            } else if(nota >= 5 && nota < 7){
+                mensagem = 'Aluno na média';
+            }else if(nota >= 7 && nota < 9.5){
+                mensagem = 'Aluno na acima da média';
+            }else if(nota >= 9.5 && nota <= 10){
+                mensagem = 'Aluno fora da curva';
+            }
+
+            alert(mensagem);
+        }
+    </script>
+</head>
+<body>
+    insira a nota do aluno;
+    <input type="text" id="id_nota">
+    <br>
+    <button onclick="verificar()">verificar nota</button>
+    
+
+</body>
+</html>

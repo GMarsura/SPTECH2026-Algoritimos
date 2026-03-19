@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function verificar(){
+            let renda = Number(id_renda.value);
+            let mensagem = 'renda familiar normal';
+
+            if(renda <= 250){
+                mensagem = 'Classe E';
+            } else if(renda <= 900){
+                mensagem = 'Classe D';
+            }else if(renda <= 2500){
+                mensagem = 'Classe C';
+            }else if(renda <= 9500){
+                mensagem = 'Classe B';
+            }else{
+                mensagem = 'Classe A';
+            }
+
+            div_mensagem.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    insira a renda familiar mensal;
+    <input type="text" id="id_renda">
+    <br>
+    <button onclick="verificar()">analizar renda</button>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>

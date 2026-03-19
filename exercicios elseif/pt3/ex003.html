@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function verificar(){
+            let temperatura = Number(id_temperatura.value);
+            let mensagem = '';
+            
+            if(temperatura < 14){
+                mensagem = 'Congelante';
+            } else if(temperatura <= 21){
+                mensagem = 'Com Frio';
+            }else if(temperatura <= 24){
+                mensagem = 'Confortável';
+            }else if(temperatura <= 31){
+                mensagem = 'Com Calor';
+            }else{
+                mensagem = 'Calor Escaldante';    
+            }
+            div_image.innerHTML = `${mensagem}`;
+        }
+    </script>
+</head>
+<body>
+    insira a tenperatura do ambiente?
+    <input type="text" id="id_temperatura">
+    <button onclick="verificar()">verificar clima</button>
+    <br>
+    <div id="div_image"></div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        function analizarFrequencia(){
+            let frequencia = Number(id_frequencia.value);
+            let image = '';
+
+            if(frequencia < 50){
+                image = 'https://depositphotos.com/br/photos/turista.html'
+            }else{
+                image = 'https://depositphotos.com/br/photos/estudantes-estudioso-estudos.html'
+            }
+            div_imagem.innerHTML = `<img src="${image}" alt="" width="100px" height="100px" style="object-fit: cover;">`
+
+        }
+    </script>
+</head>
+<body>
+    insira a frequencia do aluno
+    <input type="text" id="id_frequencia">
+
+    <br>
+
+    <button onclick="analizarFrequencia()"></button>
+    <br>
+    <div id="div_imagem"></div>
+</body>
+</html>

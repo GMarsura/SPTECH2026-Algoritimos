@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+
+        function verificar(){
+            let paes = Number(id_paes.value);
+            let bolachas = Number(id_bolachas.value);
+            let achocolatado = Number(id_achocolatado.value);
+
+            let calorias = (paes * 50) + (bolachas * 80) + (achocolatado * 70);
+
+            let mensagem = 'Parabéns, vai ficar em forma!';
+
+            if(calorias >= 200 && calorias <= 400){
+                mensagem = 'Cuidado, vai ficar menos saudável !';
+            }else if(calorias > 400){
+                mensagem = 'Alerta crítico de saúde !!!';
+            }
+
+            div_mensagem.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    quantos paes franceses voce come por dia
+    <input type="text" id="id_paes">
+    <br>
+    quantos pacotes de bolacha recheada voce come por dia
+    <input type="text" id="id_bolachas">
+    <br>
+    quantos copos de achocolatado voce toma por dia
+    <input type="text" id="id_achocolatado">
+    <br>
+    <button onclick="verificar()">Verificar calorias</button>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>

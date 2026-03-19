@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function escolherPokemon(){
+            let pokemon = id_pokemon.value.toLowerCase();
+            let mensagem = '';
+
+            if(pokemon === 'bulbasaur'){
+                mensagem = '<img src="https://sg.portal-pokemon.com/play/resources/pokedex/img/pm/cf47f9fac4ed3037ff2a8ea83204e32aff8fb5f3.png" alt="Bulbasaur">';
+            } else if(pokemon === 'charmander'){
+                mensagem = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-qfOqrd4gvB5TE5aZ8K-ox_MZJk8kz1gddg&s" alt="Charmander">';
+            } else if(pokemon === 'squirtle'){
+                mensagem = '<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0ZZOcmCktMwYWQFxgBtxdLTzTH0BcGCvXzA&s" alt="Squirtle">';
+            } else {
+                mensagem = 'Pokémon não reconhecido.';
+            }
+
+            div_mensagem.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    Qual Pokémon inicial você escolheria? (Bulbasaur, Charmander ou Squirtle)
+    <select name="pokemon" id="id_pokemon">
+        <option value="bulbasaur">Bulbasaur</option>
+        <option value="charmander">Charmander</option>
+        <option value="squirtle">Squirtle</option>
+    </select>
+    <br>
+    <button onclick="escolherPokemon()">Escolher Pokémon</button>
+    <br>
+    <div id="div_mensagem"></div>
+
+    
+</body>
+</html>

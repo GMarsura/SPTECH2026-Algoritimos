@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function verificar(){
+            let nota  = Number(id_nota.value)
+            if(nota >= 0 && nota >= 10){
+                alert( "nota valida")
+            }else{
+                alert("Onde já se viu nota menor que 0 e maior que 10?!");
+            }
+        }
+    </script>
+</head>
+<body>
+    informe sua nota
+    <input type="text" id="id_nota">
+    <button onclick="verificar()">avaliar</button>
+</body>
+</html>

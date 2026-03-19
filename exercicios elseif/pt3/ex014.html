@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        function mostrarHumor(){
+            let humor = id_humor.value;
+            let imagem = '';
+
+            if(humor === 'feliz'){
+                imagem = '😊';
+            } else if(humor === 'triste'){
+                imagem = '😢';
+            } else if(humor === 'bravo'){
+                imagem = '😡';
+            } else if(humor === 'surpreso'){
+                imagem = '😲';
+            } else if(humor === 'cansado'){
+                imagem = '😴';
+            }
+
+            div_mensagem.innerHTML = imagem;
+        }
+    </script>
+</head>
+<body>
+    como você está se sentindo hoje?
+    <select id="id_humor">
+        <option value="feliz">Feliz</option>
+        <option value="triste">Triste</option>
+        <option value="bravo">Bravo</option>
+        <option value="surpreso">Surpreso</option>
+        <option value="cansado">Cansado</option>
+    </select>
+    <br>
+    <button onclick="mostrarHumor()">Mostrar Humor</button>
+    <br>
+    <div id="div_mensagem"></div>
+   
+</body>
+</html>

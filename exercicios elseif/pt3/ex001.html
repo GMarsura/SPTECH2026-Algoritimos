@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function verificar(){
+            let altura = Number(id_altura.value);
+            let mensagem = 'estatura normal';
+
+            if(altura <= 1.65){
+                mensagem = 'Você pode ser piloto de corrida';
+            } else if(altura <= 1.80){
+                mensagem = 'Você pode ser jogador de futebol';
+            }else{
+                mensagem = 'Você pode ser jogador de vôlei ou basquete';
+            }
+
+            div_mensagem.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    insira a altura do usuario?
+    <input type="text" id="id_altura">
+    <br>
+    <button onclick="verificar()">Analisar estatura</button>
+
+    <div id="div_mensagem"></div>
+</body>
+</html>

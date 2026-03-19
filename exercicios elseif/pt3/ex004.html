@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function verificar(){
+            let peso = Number(id_peso.value);
+            let mensagem = 'peso normal';
+
+            if(peso <= 13.5){
+                mensagem = 'baixo peso';
+            } else if(peso <= 21.2){
+                if(peso == 18.3){
+                    mensagem = 'Peso perfeito ';
+                }else{      
+                mensagem = 'Peso na média';
+                }
+            }else if(peso > 21.2){
+                mensagem = 'acima do peso';
+            }
+
+            div_mensagem.innerHTML = mensagem;
+        }
+    </script>
+</head>
+<body>
+    insira o peso da crianca;
+    <input type="text" id="id_peso">
+    <br>
+    <button onclick="verificar()">analizar peso</button>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
