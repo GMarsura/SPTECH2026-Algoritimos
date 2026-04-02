@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="senha7" oninput="forca()">
+
+<p id="res7"></p>
+
+<script>
+function forca() {
+    let s = senha7.value;
+
+    let c1 = false;
+    let c2 = false;
+    let c3 = false;
+
+    if (s.length >= 8) {
+        c1 = true;
+    }
+
+    if (s != s.toLowerCase()) {
+        c2 = true;
+    }
+
+    if (s != s.toUpperCase()) {
+        c3 = true;
+    }
+
+    let pontos = 0;
+
+    if (c1) { pontos = pontos + 1; }
+    if (c2) { pontos = pontos + 1; }
+    if (c3) { pontos = pontos + 1; }
+
+    if (pontos == 3) {
+        res7.innerHTML = "Forte";
+    } else {
+        if (pontos == 2) {
+            res7.innerHTML = "Média";
+        } else {
+            if (pontos == 1) {
+                res7.innerHTML = "Fraca";
+            } else {
+                res7.innerHTML = "Insegura";
+            }
+        }
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="filme5">
+<button onclick="add5()">Cadastrar Filme</button>
+
+<p id="res5"></p>
+
+<script>
+let lista5 = [];
+
+function add5() {
+    lista5.push(filme5.value);
+
+    let texto = "";
+
+    if (lista5.length >= 1) {
+        texto = "Seu filme favorito: " + lista5[0] + "<br>";
+    }
+
+    if (lista5.length >= 3) {
+        texto = texto + "Seu 3º filme favorito: " + lista5[2] + "<br>";
+    } else {
+        texto = texto + "Seu 3º filme favorito: Ainda não existe<br>";
+    }
+
+    texto = texto + "Total de filmes cadastrados: " + lista5.length;
+
+    res5.innerHTML = texto;
+}
+</script>
+</body>
+</html>

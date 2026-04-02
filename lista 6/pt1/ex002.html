@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="frase2">
+<button onclick="analisar2()">Analisar Frase</button>
+
+<p id="res2"></p>
+
+<script>
+function analisar2() {
+    let texto = frase2.value;
+
+    if (texto.includes("teste") || texto.includes("abc") || texto.includes("spam")) {
+        res2.innerHTML = "<span style='color:red'>Frase Inválida</span>";
+    } else {
+        res2.innerHTML = "<span style='color:green'>Frase Válida!</span>";
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="destino">
+<button onclick="add()">Adicionar</button>
+
+<br><br>
+
+<button onclick="primeira()">Primeira viagem</button>
+<button onclick="terceira()">Terceira viagem</button>
+<button onclick="ultima()">Última viagem</button>
+
+<p id="res2"></p>
+
+<script>
+let viagens = [];
+
+function add() {
+    viagens.push(destino.value);
+}
+
+function primeira() {
+    if (viagens.length == 0) {
+        res2.innerHTML = "Ainda não viajou";
+    } else {
+        res2.innerHTML = viagens[0];
+    }
+}
+
+function terceira() {
+    if (viagens.length < 3) {
+        res2.innerHTML = "Ainda fez a terceira viagem";
+    } else {
+        res2.innerHTML = viagens[2];
+    }
+}
+
+function ultima() {
+    if (viagens.length == 0) {
+        res2.innerHTML = "Ainda não viajou";
+    } else {
+        res2.innerHTML = viagens[viagens.length - 1];
+    }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="filme">
+<button onclick="addFilme()">Cadastrar filme</button>
+<button onclick="verFilmes()">Ver Favoritos</button>
+
+<p id="res4"></p>
+
+<script>
+let filmes = [];
+
+function addFilme() {
+    filmes.push(filme.value);
+}
+
+function verFilmes() {
+    let texto = "";
+
+    if (filmes.length >= 1) {
+        texto = texto + filmes[0] + "<br>";
+    }
+    if (filmes.length >= 2) {
+        texto = texto + filmes[1] + "<br>";
+    }
+    if (filmes.length >= 3) {
+        texto = texto + filmes[2] + "<br>";
+    }
+    if (filmes.length >= 4) {
+        texto = texto + filmes[3] + "<br>";
+    }
+    if (filmes.length >= 5) {
+        texto = texto + filmes[4] + "<br>";
+    }
+
+    texto = texto + "Total: " + filmes.length + "<br>";
+
+    if (filmes.length > 0) {
+        texto = texto + "O filme que mais gosta é " + filmes[0] + "<br>";
+        texto = texto + "E desses, o que menos gosta é " + filmes[filmes.length - 1];
+    }
+
+    res4.innerHTML = texto;
+}
+</script>
+</body>
+</html>

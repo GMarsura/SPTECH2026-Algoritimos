@@ -5,19 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer>
+        function contar(){
+            let i = 0;
+            let mensagem = ``;
+            while(i <= 15){
+                mensagem += `${i} <br>`;
+            }
 
-        function handleFrase(){
-            let frase = ipt.value;
-            
-
+            console.log(mensagem);
         }
     </script>
 </head>
 <body>
-    informe uma Frase
-    <input type="text" id="ipt">
-    <button onclick="handleFrase()"></button>
-    <br>
+    <button onclick="contar()">contar</button>
     <div id="div_mensagem"></div>
 </body>
 </html>

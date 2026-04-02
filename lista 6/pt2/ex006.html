@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="filme6">
+<button onclick="add6()">Cadastrar</button>
+
+<p id="res6"></p>
+
+<script>
+let lista6 = [];
+
+function add6() {
+    lista6.push(filme6.value);
+
+    res6.innerHTML =
+        (lista6[0] ? lista6[0] + "<br>" : "") +
+        (lista6[1] ? lista6[1] + "<br>" : "") +
+        (lista6[2] ? lista6[2] + "<br>" : "") +
+        (lista6[3] ? lista6[3] + "<br>" : "") +
+        (lista6[4] ? lista6[4] + "<br>" : "");
+}
+</script>
+</body>
+</html>

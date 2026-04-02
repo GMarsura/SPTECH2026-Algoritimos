@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="fruta">
+<button onclick="buscar()">Pesquisar</button>
+
+<p id="res1"></p>
+
+<script>
+let lista = ["banana", "maçã", "uva", "laranja"];
+
+function buscar() {
+    let f = fruta.value;
+
+    if (
+        lista[0] == f ||
+        lista[1] == f ||
+        lista[2] == f ||
+        lista[3] == f
+    ) {
+        res1.innerHTML = "A fruta " + f + " existe na lista.";
+    } else {
+        res1.innerHTML = "Não existe a fruta " + f + " na lista.";
+    }
+}
+</script>
+</body>
+</html>

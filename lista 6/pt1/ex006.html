@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="frase6" oninput="ver6()">
+<input id="num6" oninput="ver6()">
+
+<p id="res6"></p>
+
+<script>
+function ver6() {
+    let f = frase6.value;
+    let n = num6.value;
+
+    let primeira = f[0];
+    let meio = f[n - 1];
+    let ultima = f[f.length - 1];
+
+    res6.innerHTML =
+        "Primeira letra: " + primeira + "<br>" +
+        "Letra " + n + ": " + meio + "<br>" +
+        "Última letra: " + ultima;
+}
+</script>
+</body>
+</html>

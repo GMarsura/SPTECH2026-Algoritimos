@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="filme7">
+<button onclick="add7()">Cadastrar</button>
+
+<p id="res7"></p>
+
+<script>
+let lista7 = [];
+
+function add7() {
+    lista7.push(filme7.value);
+
+    let texto = "";
+
+    if (lista7[0]) {
+        texto = texto + "<span style='color:blue'>" + lista7[0] + "</span><br>";
+    }
+    if (lista7[1]) {
+        texto = texto + "<span style='color:red'>" + lista7[1] + "</span><br>";
+    }
+    if (lista7[2]) {
+        texto = texto + "<span style='color:blue'>" + lista7[2] + "</span><br>";
+    }
+    if (lista7[3]) {
+        texto = texto + "<span style='color:red'>" + lista7[3] + "</span><br>";
+    }
+    if (lista7[4]) {
+        texto = texto + "<span style='color:blue'>" + lista7[4] + "</span><br>";
+    }
+
+    res7.innerHTML = texto;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input id="frase1">
+<button onclick="analisar1()">Analisar Frase</button>
+
+<p id="res1"></p>
+<p id="res1b"></p>
+
+<script>
+function analisar1() {
+    let texto = frase1.value;
+    let tamanho = texto.length;
+
+    res1.innerHTML = "Tamanho da Frase: " + tamanho;
+
+    if (tamanho < 10) {
+        res1b.innerHTML = "<span style='color:red'>Frase Curta!</span>";
+    } else {
+        res1b.innerHTML = "<span style='color:blue'>Frase longa!</span>";
+    }
+}
+</script>
+</body>
+</html>

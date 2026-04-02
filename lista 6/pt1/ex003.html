@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="frase3">
+<input id="palavra3">
+<button onclick="analisar3()">Analisar</button>
+
+<p id="res3"></p>
+
+<script>
+function analisar3() {
+    let frase = frase3.value;
+    let palavra = palavra3.value;
+
+    let comeca = frase.startsWith(palavra);
+    let termina = frase.endsWith(palavra);
+
+    if (comeca && termina) {
+        res3.innerHTML = "A frase começa e termina com " + palavra + "!";
+    } else {
+        if (comeca) {
+            res3.innerHTML = "A frase começa com " + palavra + "!";
+        } else {
+            if (termina) {
+                res3.innerHTML = "A frase termina com " + palavra + "!";
+            } else {
+                res3.innerHTML = "A frase não começa e nem termina com " + palavra + "!";
+            }
+        }
+    }
+}
+</script>
+</body>
+</html>

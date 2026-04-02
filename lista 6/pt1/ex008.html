@@ -1,0 +1,17 @@
+<input id="letra">
+<button onclick="verificar8()">Verificar Letras</button>
+
+<p id="res8"></p>
+
+<script>
+function verificar8() {
+    let secreta = "morango";
+    let l = letra.value;
+
+    if (secreta.includes(l)) {
+        res8.innerHTML = "A letra " + l + " aparece na palavra secreta!";
+    } else {
+        res8.innerHTML = "A letra " + l + " não aparece na palavra secreta!";
+    }
+}
+</script>

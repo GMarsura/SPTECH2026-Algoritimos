@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="p1">
+<input id="p2">
+<button onclick="comparar()">Comparar</button>
+
+<p id="res4"></p>
+
+<script>
+function comparar() {
+    let a = p1.value;
+    let b = p2.value;
+
+    if (a == b) {
+        res4.innerHTML = "As palavras " + a + " e " + b + " são exatamente iguais!";
+    } else {
+        if (a.toLowerCase() == b.toLowerCase()) {
+            res4.innerHTML = "As palavras " + a + " e " + b + " possuem o mesmo conteúdo, mas a digitação é diferente!";
+        } else {
+            res4.innerHTML = "As palavras " + a + " e " + b + " são completamente diferentes!";
+        }
+    }
+}
+</script>
+</body>
+</html>

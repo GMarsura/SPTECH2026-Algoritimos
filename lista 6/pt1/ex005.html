@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="senha" oninput="trocar()">
+
+<p id="res5"></p>
+
+<script>
+function trocar() {
+    let s = senha.value;
+
+    s = s.replaceAll("a", "@");
+    s = s.replaceAll("A", "@");
+    s = s.replaceAll("e", "3");
+    s = s.replaceAll("E", "3");
+
+    res5.innerHTML = s;
+}
+</script>
+</body>
+</html>
