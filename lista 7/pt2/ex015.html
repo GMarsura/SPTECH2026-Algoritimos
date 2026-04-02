@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function verificar(){
+            let i = Number(id_i.value);
+            let f = Number(id_f.value);
+
+            let mensagem = '';
+            
+
+            while(i<= f){
+
+                if(i%3 == 0 && i%5 == 0){
+                    mensagem += `É TRI!É PENTA!<br>`;
+                }else if(i%3 == 0){
+                    mensagem += `É TRI!<br>`;
+                }else if(i%5 == 0){
+                    mensagem += `É PENTA!<br>`;
+                }else{
+                    mensagem += `${i}<br>`;
+                }
+                i++;
+            }
+            div_mensagem.innerHTML = (mensagem)
+        }
+    </script>
+</head>
+<body>
+    informe o numero inicial:
+    <input type="text" id="id_i"><br>
+    informe o numero final
+    <input type="text" id="id_f">
+    <br>
+    <button onclick="verificar()">Curto 3 e 5!</button>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>

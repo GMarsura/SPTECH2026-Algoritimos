@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script defer>
+        function atazanar(){
+            let e = Number(qtd_elefantes.value);
+            let i = 1;
+            let inner = ''
+            while(i <= e){
+                let p = 1;
+                let es = '';
+                while(p <= i){
+                    es += "incomodam, "
+                    p++;
+                }
+
+                if(i == 1){
+                    inner += `${i} elefante incomoda muita gente! <br>`;
+                }else{
+                    inner += `${i} elefantes, ${es}muito mais! <br>`;
+                }
+
+                
+
+                i++;
+            }
+            div_mensagem.innerHTML = inner;
+            
+        }
+    </script>
+</head>
+<body>
+    informe a quantidade de elefantes
+    <br>
+    <input type="text" id="qtd_elefantes">
+    <br>
+    <button onclick="atazanar()">Atazanar a médium</button>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>

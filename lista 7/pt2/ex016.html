@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        function exibir(){
+            let m = Number(id_qtd_dias.value)
+            let i = 1;
+            let mensagem = '';
+
+            while(i <= 30){
+                if(i == 1 || (i-1) % m == 0){
+                    mensagem += `Dia ${i} - Musculação<br>`
+                }else{
+                    mensagem += `Dia ${i} - Comer, dormir etc<br>`; 
+                }
+                i++;
+            }
+            div_mensagem.innerHTML = mensagem;
+
+
+        }
+    </script>
+</head>
+<body>
+    de quantos em quantos dias o usuário faz musculação (é só uma informação, só 1 número, ok?) <br>
+    <input type="text" id="id_qtd_dias">
+    <br>
+    <button onclick="exibir()">exibir rotina mensal</button>
+    <br>
+    <div id="div_mensagem"></div>
+</body>
+</html>
